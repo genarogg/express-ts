@@ -1,9 +1,8 @@
-import { Request, Response, Router } from "express";
+import { Router } from "express";
+import homeGet from "../controllers/home";
 
 const router: Router = Router();
 
-router.get("/", (req: Request, res: Response) => {
-  res.render("inicio", { data: "Hola mundo" });
-});
+router.get("/", homeGet);
 
 export default router;
